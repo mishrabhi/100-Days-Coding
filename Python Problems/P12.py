@@ -11,3 +11,4 @@ while(num>0):
     sum = sum + dig
     num = num//10
     print("The sum of the digits in the number is: ",sum)
+ 
