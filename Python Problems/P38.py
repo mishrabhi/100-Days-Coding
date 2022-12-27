@@ -1,12 +1,16 @@
-# Get a string as the input from the user and print the non-repeating characters in a string.
+string = input("Enter a string: ")
 
-Str = input("Enter a string: ")
-for i in Str:
-    count = 0
-    for j in Str:
-        if i == j:
-            count+=1
-        if count > 1:
-            break
-        if count == 1:
-            print(i,end=" ")
+# Create a dictionary to store the frequency of each character
+char_freq = {}
+
+# Iterate through the string and update the frequency of each character in the dictionary
+for char in string:
+  if char in char_freq:
+    char_freq[char] += 1
+  else:
+    char_freq[char] = 1
+
+# Iterate through the string again and print the non-repeating characters
+for char in string:
+  if char_freq[char] == 1:
+    print(char,end="")
